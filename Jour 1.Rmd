@@ -1,0 +1,72 @@
+---
+title: "Jour 1"
+output: html_document
+date: "2025-04-22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+read_delim("input1.txt",
+         col_names = c("col1","col3", "col4", "col2")) |>
+  select(col1, col2) -> input
+input
+```
+
+```{r}
+input|>
+  arrange(col1) |>
+  select(col1)-> input1
+input1
+```
+
+```{r}
+input |>
+  arrange(col2) |>
+  select(col2) -> input2
+input2
+```
+
+
+```{r}
+input1 |>
+  mutate(input2, col2) -> input3
+input3
+```
+
+
+```{r}
+input3 |>
+  mutate(dif = abs(col1 - col2)) -> input4
+input4
+```
+
+```{r}
+input4 |>
+  summarise(total = sum(dif))
+```
+
+
+```{r}
+input3
+```
+```{r}
+input |> 
+  mutate(occurences = map_int(col1, function(x) sum(x == input$col2))) -> input5
+input5
+```
+
+```{r}
+input5 |>
+  mutate(score = col1*occurences)
+```
+
+```{r}
+input5 |>
+  mutate(score = col1*occurences) |>
+  summarise(total = sum(score))
+```
+
