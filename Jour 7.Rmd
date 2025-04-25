@@ -1,0 +1,52 @@
+---
+title: "Jour 7"
+output: html_document
+date: "2025-04-23"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+read_lines("input7.txt") |>
+  as_tibble() -> jour7
+jour7
+```
+
+```{r}
+jour7 |>
+  separate(col = value, into = c("col1", "col2"), sep = "\\:") |>
+  mutate(col2 = str_replace_all(col2, "\\s+", " ")) |> 
+  mutate(col2 = str_trim(col2)) -> jour7_1
+jour7_1
+```
+
+```{r}
+calcul <- function(vec, res) {
+  expand.grid(rep(list(c("*","+")), length(vec)-1L)) |>
+    as.matrix() |>
+    asplit(MARGIN =1) |>
+    map_dbl(\(x) left2right (x, vec, res))
+}
+```
+
+```{r}
+
+```
+
+
+```{r}
+jour7_1 |>
+  mutate(possible = map(list, th("v"))) |>
+  filter(possible) |>
+  pull(col1)
+```
+
+
+
+
+
+
+
