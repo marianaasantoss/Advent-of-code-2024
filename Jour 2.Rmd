@@ -1,0 +1,94 @@
+---
+title: "Jour 2"
+output: html_document
+date: "2025-04-22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+Part 1
+
+```{r}
+read_lines("input2.txt") -> input
+
+tibble(input = input) |> 
+  mutate(vec = map(input, function(x) str_split_1(x, " ") |> as.integer()),
+         diff = map(vec, diff),
+         sign = map(diff, sign),
+         descending = map_int(sign, function(x) sum(x == -1)),
+         ascending = map_int(sign, function(x) sum(x == 1)),
+         lg = map_int(vec, length)) -> table1
+table1
+```
+```{r}
+table1 |>
+  filter(descending == lg - 1 | ascending == lg - 1) -> table2
+table2
+```
+
+
+```{r}
+table2 |>
+  mutate(correct_diff = map_lgl(diff, function(x) all(abs(x) <= 3 ))) |> 
+  filter(correct_diff) |>
+  count()
+```
+## Part 2
+
+Test all possibilities, brute force approach
+
+```{r}
+badlevel <- function(v) {
+  map(seq_along(v), function(x) v[-x])
+}
+```
+
+```{r}
+ved
+```
+
+```{r}
+badlevel(ved)
+```
+
+
+```{r}
+tibble(input = input) |> 
+  mutate(vec = map(input, function(x) str_split_1(x, " ") |> as.integer()),
+         id = seq_along(input),
+         out = map(vec, badlevel)) |> 
+  unnest(out) -> table3
+table3
+```
+
+
+
+```{r}
+table3 |> 
+  mutate(diff = map(out, diff),
+         sign = map(diff, sign),
+         descending = map_int(sign, function(x) sum(x == -1)),
+         ascending = map_int(sign, function(x) sum(x == 1)),
+         lg = map_int(out, length)) -> table4
+table4
+```
+
+
+```{r}
+table4 |>
+  filter(descending == lg - 1 | ascending == lg - 1) -> table5
+table5
+```
+
+```{r}
+table5 |>
+  mutate(correct_diff = map_lgl(diff, function(x) all(abs(x) <= 3 ))) |> 
+  filter(correct_diff) |>
+  count(id)
+```
+
+
+
