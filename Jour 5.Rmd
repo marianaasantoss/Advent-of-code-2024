@@ -1,0 +1,57 @@
+---
+title: "Hour 5"
+output: html_document
+date: "2025-04-23"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+read_lines("input5.txt") |>
+  as_tibble() -> jour5
+jour5
+```
+
+
+```{r}
+jour5 |>
+filter(str_detect(value, "^\\d{2}\\|\\d{2}$")) -> jour5_1
+jour5_1
+```
+
+```{r}
+jour5_1 |>
+  separate(col = value, into = c("col1", "col2"), sep = "\\|") 
+```
+
+```{r}
+jour5 |>
+filter(str_detect(value, "^([1-9][0-9]?)(,([1-9][0-9]?))*$")) -> jour5_2
+jour5_2
+```
+
+
+
+```{r}
+map_lgl(jour5_2$value, \(x) {
+  str_split_1(x, ',') |>
+    combn(2, simplify = FALSE) |>
+    map_chr(paste, collapse = "|") -> up_pairs
+  all(up_pairs %in% jour5_1$value)
+}) -> correct_updates
+correct_updates
+```
+
+```{r}
+correct_updates |>
+  as.tibble() |>
+  count(value) #value too low
+```
+
+
+updates[crrect_updates] |>
+map_int(extract_midpoint) |>
+sum()
