@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "Mariana' AoC"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: 2024.qmd
+        text: "2024"
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme: cosmo
+    highlight-style: dracula
+    toc: true
