@@ -1,0 +1,14 @@
+Package: blog
+Title: blog Companion
+Version: 1.0.0
+Description: Companion website
+License: MIT + file LICENSE
+Depends:
+  R (>= 4.1.0)
+Imports:
+  knitr,
+  ragg,
+  markdown,
+  tidyverse
+Encoding: UTF-8
+Language: en-US
