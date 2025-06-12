@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Mariana’ AoC</title>
+<title>Day 4 - Camp Cleanup – Mariana’ AoC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed09741bc9a4bc7923efc7a27dab3f48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-34bca7ac9357ff2cfe3df0917c13bb37.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed09741bc9a4bc7923efc7a27dab3f48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-34bca7ac9357ff2cfe3df0917c13bb37.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Mariana’ AoC</span>
     </a>
   </div>
@@ -89,23 +124,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./2022.html"> 
+    <a class="nav-link" href="../2022.html"> 
 <span class="menu-text">2022</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./2023.html"> 
+    <a class="nav-link" href="../2023.html"> 
 <span class="menu-text">2023</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./2024.html"> 
+    <a class="nav-link" href="../2024.html"> 
 <span class="menu-text">2024</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -119,15 +154,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#challenge-part-1" id="toc-challenge-part-1" class="nav-link active" data-scroll-target="#challenge-part-1">Challenge Part 1</a>
+  <ul class="collapse">
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input">Input</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running code</a></li>
+  </ul></li>
+  <li><a href="#challenge-part-2" id="toc-challenge-part-2" class="nav-link" data-scroll-target="#challenge-part-2">Challenge Part 2</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Day 4 - Camp Cleanup</h1>
 </div>
 
 
@@ -144,9 +190,175 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Hello, bom dia, I am Mariana and I enjoy solving puzzles</p>
+<section id="challenge-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-part-1">Challenge Part 1</h2>
+<p>Space needs to be cleared before the last supplies can be unloaded from the ships, and so several Elves have been assigned the job of cleaning up sections of the camp. Every section has a unique&nbsp;<em>ID number</em>, and each Elf is assigned a range of section IDs.</p>
+<p>However, as some of the Elves compare their section assignments with each other, they’ve noticed that many of the assignments&nbsp;<em>overlap</em>. To try to quickly find overlaps and reduce duplicated effort, the Elves pair up and make a&nbsp;<em>big list of the section assignments for each pair</em>&nbsp;(your puzzle input).</p>
+<p>For example, consider the following list of section assignment pairs:</p>
+<pre><code>2-4,6-8
+2-3,4-5
+5-7,7-9
+2-8,3-7
+6-6,4-6
+2-6,4-8</code></pre>
+<p>For the first few pairs, this list means:</p>
+<ul>
+<li><p>Within the first pair of Elves, the first Elf was assigned sections&nbsp;<code>2-4</code>&nbsp;(sections&nbsp;<code>2</code>,&nbsp;<code>3</code>, and&nbsp;<code>4</code>), while the second Elf was assigned sections&nbsp;<code>6-8</code>&nbsp;(sections&nbsp;<code>6</code>,&nbsp;<code>7</code>,&nbsp;<code>8</code>).</p></li>
+<li><p>The Elves in the second pair were each assigned two sections.</p></li>
+<li><p>The Elves in the third pair were each assigned three sections: one got sections&nbsp;<code>5</code>,&nbsp;<code>6</code>, and&nbsp;<code>7</code>, while the other also got&nbsp;<code>7</code>, plus&nbsp;<code>8</code>&nbsp;and&nbsp;<code>9</code>.</p></li>
+</ul>
+<p>This example list uses single-digit section IDs to make it easier to draw; your actual list might contain larger numbers. Visually, these pairs of section assignments look like this:</p>
+<pre><code>.234.....  2-4
+.....678.  6-8
+
+.23......  2-3
+...45....  4-5
+
+....567..  5-7
+......789  7-9
+
+.2345678.  2-8
+..34567..  3-7
+
+.....6...  6-6
+...456...  4-6
+
+.23456...  2-6
+...45678.  4-8</code></pre>
+<p>Some of the pairs have noticed that one of their assignments&nbsp;<em>fully contains</em>the other. For example,&nbsp;<code>2-8</code>&nbsp;fully contains&nbsp;<code>3-7</code>, and&nbsp;<code>6-6</code>&nbsp;is fully contained by&nbsp;<code>4-6</code>. In pairs where one assignment fully contains the other, one Elf in the pair would be exclusively cleaning sections their partner will already be cleaning, so these seem like the most in need of reconsideration. In this example, there are&nbsp;<em><code>2</code></em>&nbsp;such pairs.</p>
+<section id="input" class="level3">
+<h3 class="anchored" data-anchor-id="input">Input</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_lines</span>(<span class="st">"input42022.txt"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="ot">-&gt;</span> pairs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: One or more parsing issues, call `problems()` on your data frame for details,
+e.g.:
+  dat &lt;- vroom(...)
+  problems(dat)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pairs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,000 × 1
+   value      
+   &lt;chr&gt;      
+ 1 1-93,2-11  
+ 2 26-94,26-94
+ 3 72-92,48-88
+ 4 36-37,37-52
+ 5 2-98,1-98  
+ 6 1-83,1-84  
+ 7 74-79,76-76
+ 8 66-85,66-86
+ 9 6-73,6-73  
+10 31-57,30-58
+# ℹ 990 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="running-code" class="level3">
+<h3 class="anchored" data-anchor-id="running-code">Running code</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">col1 =</span> <span class="fu">str_split_1</span>(value, <span class="st">","</span>)[<span class="dv">1</span>],</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col2 =</span> <span class="fu">str_split_1</span>(value, <span class="st">","</span>)[<span class="dv">2</span>]) <span class="ot">-&gt;</span> cols</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>cols</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,000 × 3
+# Rowwise: 
+   value       col1  col2 
+   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;
+ 1 1-93,2-11   1-93  2-11 
+ 2 26-94,26-94 26-94 26-94
+ 3 72-92,48-88 72-92 48-88
+ 4 36-37,37-52 36-37 37-52
+ 5 2-98,1-98   2-98  1-98 
+ 6 1-83,1-84   1-83  1-84 
+ 7 74-79,76-76 74-79 76-76
+ 8 66-85,66-86 66-85 66-86
+ 9 6-73,6-73   6-73  6-73 
+10 31-57,30-58 31-57 30-58
+# ℹ 990 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>cols <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">col1 =</span> <span class="fu">str_replace_all</span>(col1, <span class="st">"-"</span>, <span class="st">":"</span>),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">col2 =</span> <span class="fu">str_replace_all</span>(col2, <span class="st">"-"</span>, <span class="st">":"</span>)) <span class="ot">-&gt;</span> cols1</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>cols1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,000 × 3
+# Rowwise: 
+   value       col1  col2 
+   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;
+ 1 1-93,2-11   1:93  2:11 
+ 2 26-94,26-94 26:94 26:94
+ 3 72-92,48-88 72:92 48:88
+ 4 36-37,37-52 36:37 37:52
+ 5 2-98,1-98   2:98  1:98 
+ 6 1-83,1-84   1:83  1:84 
+ 7 74-79,76-76 74:79 76:76
+ 8 66-85,66-86 66:85 66:86
+ 9 6-73,6-73   6:73  6:73 
+10 31-57,30-58 31:57 30:58
+# ℹ 990 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>cols1 <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">col1_range =</span> <span class="fu">map</span>(col1, <span class="sc">~</span> <span class="fu">eval</span>(<span class="fu">parse</span>(<span class="at">text =</span> .x)))) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">col2_range =</span> <span class="fu">map</span>(col2, <span class="sc">~</span> <span class="fu">eval</span>(<span class="fu">parse</span>(<span class="at">text =</span> .x)))) <span class="ot">-&gt;</span> cols2</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>cols2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,000 × 5
+# Rowwise: 
+   value       col1  col2  col1_range col2_range
+   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;list&gt;     &lt;list&gt;    
+ 1 1-93,2-11   1:93  2:11  &lt;int [93]&gt; &lt;int [10]&gt;
+ 2 26-94,26-94 26:94 26:94 &lt;int [69]&gt; &lt;int [69]&gt;
+ 3 72-92,48-88 72:92 48:88 &lt;int [21]&gt; &lt;int [41]&gt;
+ 4 36-37,37-52 36:37 37:52 &lt;int [2]&gt;  &lt;int [16]&gt;
+ 5 2-98,1-98   2:98  1:98  &lt;int [97]&gt; &lt;int [98]&gt;
+ 6 1-83,1-84   1:83  1:84  &lt;int [83]&gt; &lt;int [84]&gt;
+ 7 74-79,76-76 74:79 76:76 &lt;int [6]&gt;  &lt;int [1]&gt; 
+ 8 66-85,66-86 66:85 66:86 &lt;int [20]&gt; &lt;int [21]&gt;
+ 9 6-73,6-73   6:73  6:73  &lt;int [68]&gt; &lt;int [68]&gt;
+10 31-57,30-58 31:57 30:58 &lt;int [27]&gt; &lt;int [29]&gt;
+# ℹ 990 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>cols2 <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(col1_range, col2_range) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_subset =</span> <span class="fu">all</span>(col1_range <span class="sc">%in%</span> col2_range) <span class="sc">|</span> <span class="fu">all</span>(col2_range <span class="sc">%in%</span> col1_range)) <span class="sc">|&gt;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(is_subset) <span class="sc">|&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 503</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="challenge-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-part-2">Challenge Part 2</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>cols2 <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(col1_range, col2_range) <span class="sc">|&gt;</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_subset =</span> <span class="fu">any</span>(col1_range <span class="sc">%in%</span> col2_range))<span class="sc">|&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(is_subset) <span class="sc">|&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">nrow</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 827</code></pre>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
