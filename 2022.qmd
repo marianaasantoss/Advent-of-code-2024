@@ -1,0 +1,7 @@
+---
+title: "2022"
+listing:
+  contents:
+    - "2022/*.qmd"
+---
+
